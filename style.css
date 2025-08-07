@@ -204,17 +204,15 @@
 
   #acesso .acesso-container {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  align-items:center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 40px;
-  position: relative;
-  z-index: 1;
+  padding: 40px;
 }
 
 #acesso .acesso-texto {
-  max-width: 300px;
-  text-align: left;
+  width: 300px;
 }
 
 #acesso .acesso-texto h2 {
@@ -222,6 +220,19 @@
   color: white;
 }
 
+#acesso .login-box {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+}
+
+#acesso .login-box p {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 14px;
+}
 
 #cadastro {
   background: #eaf1f9;
