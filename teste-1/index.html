@@ -13,11 +13,12 @@
 <link rel="shortcut icon" href="favicon.ico">
 <link rel="stylesheet"
 	href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+</head>
 <body
 	onload="setEventosNosComponentes(); document.forms[0].getElementsByTagName('input')[0].focus();" id="body-2">
 
-	<header id="topo">
-		<div class="logo">
+	<header id="topo" role="banner">
+		<div class="logo" aria-label="Logotipo do site">
 			<div class="bars">
 				<div class="bar bar1"></div>
 				<div class="bar bar2"></div>
@@ -31,7 +32,7 @@
 		<span id="burguer" class="material-symbols-outlined"
 			onclick="clickMenu()">menu</span>
 
-		<menu id="itens">
+		<nav id="itens">
 			<ul>
 				<li><a href="#acesso">Acesso</a></li>
 				<li><a href="#cadastro">Cadastro</a></li>
@@ -40,229 +41,206 @@
 				<li><a href="#mei">MEI</a></li>
 				<li><a href="#suporte">Suporte</a></li>
 			</ul>
-		</menu>
+		</nav>
 
 	</header>
 
-	<section id="acesso">
-		<div class="acesso-container">
-			<div class="acesso-texto">
-				<h2>
-					ISS e Nota Fiscal: <span class="destaque">simples</span>, <span
-						class="destaque">rápido</span> e <span class="destaque">seguro</span>.
-					Acesse o sistema SIGISSWEB e emita suas notas com <span
-						class="destaque">praticidade</span> e <span class="destaque">confiança</span>.
-				</h2>
-			</div>
-			<div class="login-box">
-				<form name="frmlogin" method="post" id="formAcesso">
-					<label for="login">Login:</label> <input type="text" maxlength="20"
-						 name="loginacesso" id="edtlogin"
-						placeholder="Digite seu login"> <label for="senha">Senha:</label>
-					<input type="password"  name="senha"
-						id="edtsenha" placeholder="Digite sua senha">
-
-					<button type="button" name="btnExecutar"
-						onclick="javascript: escreveMsgComAnimacao('Acessando sistema...'); submitForm(document.getElementById('formAcesso'));">
-						Acessar</button>
-				</form>
-				<a class="link-esqueci" href="javascript: esqueciMinhaSenha();">Esqueci
-					minha senha</a>
-			</div>
-		</div>
-
-		<div id="miniPopup" class="mini-popup" style="display: none;">
-			<h3>Dúvidas? Prefeitura ou Suporte</h3>
-			<p>Acesse a seção correspondente</p>
-			<div class="popup-buttons">
-				<button id="btnSim">Sim</button>
-				<button id="btnNao">Não</button>
-			</div>
-		</div>
-		<div id="popupAviso" class="popup-esquerda" style="display: none;">
-			<button id="btnFecharPopup" class="btn-fechar">×</button>
-			<div class="popup-texto">
-				<strong>ATENÇÃO:</strong><br> Desde de 01/06/2025 o Município
-				de Valinhos passou a emitir a Nota Fiscal Eletrônica de Serviços no
-				padrão nacional, integrada à Receita Federal do Brasil em
-				atendimento à LC 214/2015 artigo 62 §7°.<br> Essa integração é
-				obrigatória a todos os Municípios do Brasil em atendimento à Reforma
-				Tributária.
-			</div>
-		</div>
-
-		<div id="popupAviso" class="popup-esquerda" style="display: none;">
-			<button id="btnFecharPopup" class="btn-fechar">×</button>
-			<div class="popup-texto">
-				<strong>ATENÇÃO:</strong><br> O SIGISSWEB É UTILIZADO PELOS
-				CONTRIBUINTES APENAS PARA RESPONDER AS NOTIFICAÇÕES DO FISCO
-				MUNICIPAL. PARA SOLICITAÇÃO / EMISSÃO DE NOTA FISCAL DE SERVIÇOS
-				ENTRE EM CONTATO COM O DEPARTAMENTO DE FISCALIZAÇÃO ATRAVÉS DO
-				NÚMERO 19-3965-1400 E SOLICITE AS DEVIDAS INFORMAÇÕES.
-			</div>
-		</div>
-
-	</section>
-
-	<section id="cadastro" class="fade-init fade-up">
-		<div class="cadastro-container">
-
-			<div class="cadastro-card">
-				<h2>Cadastro do Responsável Contábil/Empresa</h2>
-				<p>Cadastre-se para emitir Notas Fiscais e efetuar o
-					recolhimento do ISS com eficiência, segurança e praticidade.</p>
-				<a class="cad-card"
-					href="#">
-					Cadastro do Responsável Contábil/Empresa </a>
-			</div>
-
-			<div class="cadastro-card">
-				<h3>Deseja alterar o e-mail de acesso?</h3>
-				<p>Clique para ser redirecionado(a) para atualizar o e-mail de
-					recebimento da senha.</p>
-				<a class="cad-card"
-					href="#"
-					target="_blank"> Alterar e-mail </a>
-			</div>
-
-		</div>
-	</section>
-
-
-	<section id="documentos">
-		<h2>Verifique seus documentos</h2>
-		<div class="documentos-links fade-init fade-scale-up">
-			<a class="doc-card" href="#">Autenticidade da NFe</a> <a
-				class="doc-card" href="#">Verificar Autenticidade da
-				CND</a> <a class="doc-card" href="#">Verificar
-				Autenticidade da DRISS</a>
-
-		</div>
-	</section>
-
-	<section id="downloads" class="fade-init fade-left">
-		<h2>
-			<span style="font-size: 32px;"></span> Materiais para Download
-		</h2>
-		<p class="subtitulo">Saiba mais sobre como utilizar o Sigiss Web e
-			integre facilmente ao seu sistema.</p>
-		<div class="downloads-grid">
-			<a class="download-card"
-				href="#">
-				<h3>Manual do SIGISSWEB</h3>
-				<p>Guia completo de uso do sistema para contribuintes e
-					contadores.</p>
-			</a> <a class="download-card"
-				href="#">
-				<h3>Documentação para Integração</h3>
-				<p>Instruções para integração do SIGISSWEB com o seu site ou
-					sistema.</p>
-			</a> <a class="download-card"
-				href="#">
-				<h3>Nova Listas de Classif. de Serviço e NBS</h3>
-				<p>Classificações atualizadas conforme normas vigentes.</p>
-			</a>
-
-			<a class="download-card"
-				href="#"
-				target="_blank">
-				<h3>Alíquotas ISS de Itirapina</h3>
-				<p>Lista das Alíquotas do município de Itirapina</p>
-			</a>
-
-		</div>
-	</section>
-
-	<section id="mei" class="fade-init fade-right">
-		<h2>Você é MEI?</h2>
-		<p class="comunicado">Comunicado importante sobre emissão de Nota
-
-		<div class="comunicado-box">
-			<p>
-				<strong>Prezado MEI,</strong>
-			</p>
-			<p>
-				Considerando o disposto na Resolução CGSN 172/2023, a emissão de <strong>NOTA
-					FISCAL DE SERVIÇO NO PADRÃO NACIONAL</strong> entrará em vigor
-				obrigatoriamente em 01/09/2023. <br> Desta forma, <strong>NÃO
-					será mais permitida</strong> a emissão de Notas Fiscais de Serviços pelo
-				SIGISSWEB a partir desta data, estando disponível apenas o acesso
-				para consulta das notas fiscais já emitidas no sistema.
-			</p>
-			<p>Assim, orientamos que acesse o site abaixo para informações
-				sobre procedimentos de cadastro e emissão da nota fiscal eletrônica
-				nacional:</p>
-			<p>
-				<a class="comunicado-link"
-					href="#"
-					target="_blank"> NOTA FISCAL DE SERVIÇO NO PADRÃO NACIONAL </a>
-			</p>
-			<p>Qualquer dúvida sobre o sistema nacional, entre em contato com
-				a Receita Federal do Brasil pelo e-mail abaixo, uma vez que o
-				SIGISSWEB não será responsável pelo suporte técnico:</p>
-			<p>
-				<strong>E-mail:</strong> atendimento.nfs-e@rfb.gov.br
-			</p>
-			<p>Atenciosamente.</p>
-		</div>
-	</section>
-	
-	<section id="suporte" class="fade-init fade-zoom">
-		<h2>Precisa de ajuda?</h2>
-		<p id="suporte-p">Entre em contato com nossa equipe técnica ou
-			Prefeitura.</p>
-
-		<div class="contato-blocos">
-
-			<div class="contato-item">
-				<h3>Telefones</h3>
-				<p>(19) 9999-9999</p>
-				<p>(19) 9999-9999</p>
-				<p>(19) 9999-9999</p>
-			</div>
-
-			<div class="contato-item">
-				<h3>E-mails</h3>
-				<p>teste@teste.com</p>
-				<p>teste@teste.com</p>
-				<p>teste@teste.com</p>
-				<p>teste@teste.com</p>
-			</div>
-
-			<div class="contato-item">
-				<h3>Skype</h3>
-				<p>teste.sigiss1</p>
-				<p>teste.sigiss</p>
-			</div>
-
-			<div class="contato-item">
-				<h3>Telefones da prefeitura</h3>
-				<p id="telCabecalho">(19)9999-9999</p>
-			</div>
-	
-			<div id="contato-item">
-
-				<div class="contato-item">
-					<h3>Contato com a Fiscalização</h3>
-					<p>
-						<strong>Plantão Fiscal:</strong> teste@teste.com
-					</p>
-					<p>
-						<strong>Abertura de Empresas:</strong>
-						teste@teste.com
-					</p>
-					<p>
-						<strong>Viabilidade/Zoneamento:</strong>
-						teste@teste.com
-					</p>
+	<main role="main">
+		<section id="acesso">
+			<div class="acesso-container">
+				<div class="acesso-texto">
+					<h2>
+						ISS e Nota Fiscal: <span class="destaque">simples</span>, <span
+							class="destaque">rápido</span> e <span class="destaque">seguro</span>.
+						Acesse o sistema SIGISSWEB e emita suas notas com <span
+							class="destaque">praticidade</span> e <span class="destaque">confiança</span>.
+					</h2>
 				</div>
-			
+				<div class="login-box">
+					<form name="frmlogin" method="post" id="formAcesso">
+						<label for="login">Login:</label> <input type="text" maxlength="20"
+							 name="loginacesso" id="edtlogin"
+							placeholder="Digite seu login"> <label for="senha">Senha:</label>
+						<input type="password"  name="senha"
+							id="edtsenha" placeholder="Digite sua senha">
+						<button type="button" name="btnExecutar"
+							onclick="javascript: escreveMsgComAnimacao('Acessando sistema...'); submitForm(document.getElementById('formAcesso'));">
+							Acessar</button>
+					</form>
+					<a class="link-esqueci" href="javascript: esqueciMinhaSenha();">Esqueci
+						minha senha</a>
+				</div>
 			</div>
-
-
-		</div>
-
-	</section>
+			<div id="miniPopup" class="mini-popup" style="display: none;">
+				<h3>Dúvidas? Prefeitura ou Suporte</h3>
+				<p>Acesse a seção correspondente</p>
+				<div class="popup-buttons">
+					<button id="btnSim">Sim</button>
+					<button id="btnNao">Não</button>
+				</div>
+			</div>
+			<div id="popupAviso" class="popup-esquerda" style="display: none;">
+				<button id="btnFecharPopup" class="btn-fechar">×</button>
+				<div class="popup-texto">
+					<strong>ATENÇÃO:</strong><br> Desde de 01/06/2025 o Município
+					de Valinhos passou a emitir a Nota Fiscal Eletrônica de Serviços no
+					padrão nacional, integrada à Receita Federal do Brasil em
+					atendimento à LC 214/2015 artigo 62 §7°.<br> Essa integração é
+					obrigatória a todos os Municípios do Brasil em atendimento à Reforma
+					Tributária.
+				</div>
+			</div>
+			<div id="popupAviso" class="popup-esquerda" style="display: none;">
+				<button id="btnFecharPopup" class="btn-fechar">×</button>
+				<div class="popup-texto">
+					<strong>ATENÇÃO:</strong><br> O SIGISSWEB É UTILIZADO PELOS
+					CONTRIBUINTES APENAS PARA RESPONDER AS NOTIFICAÇÕES DO FISCO
+					MUNICIPAL. PARA SOLICITAÇÃO / EMISSÃO DE NOTA FISCAL DE SERVIÇOS
+					ENTRE EM CONTATO COM O DEPARTAMENTO DE FISCALIZAÇÃO ATRAVÉS DO
+					NÚMERO 19-3965-1400 E SOLICITE AS DEVIDAS INFORMAÇÕES.
+				</div>
+			</div>
+		</section>
+		<section id="cadastro" class="fade-init fade-up">
+			<div class="cadastro-container">
+				<div class="cadastro-card">
+					<h2>Cadastro do Responsável Contábil/Empresa</h2>
+					<p>Cadastre-se para emitir Notas Fiscais e efetuar o
+						recolhimento do ISS com eficiência, segurança e praticidade.</p>
+					<a class="cad-card"
+						href="#">
+						Cadastro do Responsável Contábil/Empresa </a>
+				</div>
+				<div class="cadastro-card">
+					<h3>Deseja alterar o e-mail de acesso?</h3>
+					<p>Clique para ser redirecionado(a) para atualizar o e-mail de
+						recebimento da senha.</p>
+					<a class="cad-card"
+						href="#"
+						target="_blank"> Alterar e-mail </a>
+				</div>
+			</div>
+		</section>
+		<section id="documentos">
+			<h2>Verifique seus documentos</h2>
+			<div class="documentos-links fade-init fade-scale-up">
+				<a class="doc-card" href="#">Autenticidade da NFe</a> <a
+					class="doc-card" href="#">Verificar Autenticidade da
+					CND</a> <a class="doc-card" href="#">Verificar
+					Autenticidade da DRISS</a>
+			</div>
+		</section>
+		<section id="downloads" class="fade-init fade-left">
+			<h2>
+				<span style="font-size: 32px;"></span> Materiais para Download
+			</h2>
+			<p class="subtitulo">Saiba mais sobre como utilizar o Sigiss Web e
+				integre facilmente ao seu sistema.</p>
+			<div class="downloads-grid">
+				<a class="download-card"
+					href="#">
+					<h3>Manual do SIGISSWEB</h3>
+					<p>Guia completo de uso do sistema para contribuintes e
+						contadores.</p>
+				</a> <a class="download-card"
+					href="#">
+					<h3>Documentação para Integração</h3>
+					<p>Instruções para integração do SIGISSWEB com o seu site ou
+						sistema.</p>
+				</a> <a class="download-card"
+					href="#">
+					<h3>Nova Listas de Classif. de Serviço e NBS</h3>
+					<p>Classificações atualizadas conforme normas vigentes.</p>
+				</a>
+				<a class="download-card"
+					href="#"
+					target="_blank">
+					<h3>Alíquotas ISS de Itirapina</h3>
+					<p>Lista das Alíquotas do município de Itirapina</p>
+				</a>
+			</div>
+		</section>
+		<section id="mei" class="fade-init fade-right">
+			<h2>Você é MEI?</h2>
+			<p class="comunicado">Comunicado importante sobre emissão de Nota
+			<div class="comunicado-box">
+				<p>
+					<strong>Prezado MEI,</strong>
+				</p>
+				<p>
+					Considerando o disposto na Resolução CGSN 172/2023, a emissão de <strong>NOTA
+						FISCAL DE SERVIÇO NO PADRÃO NACIONAL</strong> entrará em vigor
+					obrigatoriamente em 01/09/2023. <br> Desta forma, <strong>NÃO
+						será mais permitida</strong> a emissão de Notas Fiscais de Serviços pelo
+					SIGISSWEB a partir desta data, estando disponível apenas o acesso
+					para consulta das notas fiscais já emitidas no sistema.
+				</p>
+				<p>Assim, orientamos que acesse o site abaixo para informações
+					sobre procedimentos de cadastro e emissão da nota fiscal eletrônica
+					nacional:</p>
+				<p>
+					<a class="comunicado-link"
+						href="#"
+						target="_blank"> NOTA FISCAL DE SERVIÇO NO PADRÃO NACIONAL </a>
+				</p>
+				<p>Qualquer dúvida sobre o sistema nacional, entre em contato com
+					a Receita Federal do Brasil pelo e-mail abaixo, uma vez que o
+					SIGISSWEB não será responsável pelo suporte técnico:</p>
+				<p>
+					<strong>E-mail:</strong> atendimento.nfs-e@rfb.gov.br
+				</p>
+				<p>Atenciosamente.</p>
+			</div>
+		</section>
+		
+		<section id="suporte" class="fade-init fade-zoom">
+			<h2>Precisa de ajuda?</h2>
+			<p id="suporte-p">Entre em contato com nossa equipe técnica ou
+				Prefeitura.</p>
+			<div class="contato-blocos">
+				<div class="contato-item">
+					<h3>Telefones</h3>
+					<p>(19) 9999-9999</p>
+					<p>(19) 9999-9999</p>
+					<p>(19) 9999-9999</p>
+				</div>
+				<div class="contato-item">
+					<h3>E-mails</h3>
+					<p>teste@teste.com</p>
+					<p>teste@teste.com</p>
+					<p>teste@teste.com</p>
+					<p>teste@teste.com</p>
+				</div>
+				<div class="contato-item">
+					<h3>Skype</h3>
+					<p>teste.sigiss1</p>
+					<p>teste.sigiss</p>
+				</div>
+				<div class="contato-item">
+					<h3>Telefones da prefeitura</h3>
+					<p id="telCabecalho">(19)9999-9999</p>
+				</div>
+		
+				<div id="contato-item" >
+					<div class="contato-item">
+						<h3>Contato com a Fiscalização</h3>
+						<p>
+							<strong>Plantão Fiscal:</strong> teste@teste.com
+						</p>
+						<p>
+							<strong>Abertura de Empresas:</strong>
+							teste@teste.com
+						</p>
+						<p>
+							<strong>Viabilidade/Zoneamento:</strong>
+							teste@teste.com
+						</p>
+					</div>
+		
+				</div>
+			</div>
+		</section>
+	</main>
 
 	<div class="scroll-top-btn" id="scrollTopBtn">
 		<a href="#topo"> <img src="./img/flecha45px.png"

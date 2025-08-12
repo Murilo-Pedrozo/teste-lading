@@ -5,10 +5,10 @@
     #burguer {
         display: none;
     }
-    menu {
+    nav {
         display: block;
     }
-    menu>ul>li {
+    nav>ul>li {
         display: inline-block;
         margin-right: 15px;
     }
@@ -33,29 +33,29 @@
     padding: 10px;
     border-radius: 8px;
   }
-  menu {
+  nav {
     display: none;
     width: 100%;
     background-color: #0d4d78;
   }
 
-  menu ul {
+  nav ul {
     display: flex;
     flex-direction: column;
     padding: 0;
     margin: 0;
   }
 
-  menu ul li {
+  nav ul li {
     padding: 12px 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  menu ul li:first-child {
+  nav ul li:first-child {
     border-top: none;
   }
 
-  menu ul li a {
+  nav ul li a {
     display: block;
     color: white;
     font-weight: bold;
@@ -87,29 +87,29 @@
 }
 
 @media screen and (max-width: 600px) {
- menu {
+ nav {
     display: none;
     width: 100%;
     background-color: #0d4d78;
   }
 
-  menu ul {
+  nav ul {
     display: flex;
     flex-direction: column;
     padding: 0;
     margin: 0;
   }
 
-  menu ul li {
+  nav ul li {
     padding: 12px 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
 
-  menu ul li:first-child {
+  nav ul li:first-child {
     border-top: none;
   }
 
-  menu ul li a {
+  nav ul li a {
     display: block;
     color: white;
     font-weight: bold;
