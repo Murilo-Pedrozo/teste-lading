@@ -67,3 +67,33 @@
   }
  
 }
+
+@media screen and (max-width: 600px) {
+
+  main {
+    width: 100vw;
+    padding: 10px;
+  }
+
+  nav.menu {
+    display: block;
+  }
+
+  nav.menu ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav.menu li {
+    margin: 5px 0;
+  }
+
+  img#phone {
+    display: block;
+  }
+
+  img#tablet, img#print, img#pc, img#tv {
+    display: none;
+  }
+}
