@@ -8,66 +8,9 @@
 }
 
 body {
-  position: relative;
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  overflow-x: hidden;
-  background: #f9f9f9 url(../img/fundo.png) center center no-repeat fixed;
-  background-size: cover;
-}
-
-#body-2 {
-  overflow-x: hidden;
+   overflow-x: hidden;
   background: #eaf1f9;
-}
-
-body2 {
-	font-family: "Open Sans", sans-serif;
-	background: #f9f9f9 url(../img/fundoiss.png);
-}
-
-
-
-form input[type="text"], input[type="password"], #inputaliquota {
-	font-size: 14px;
-	border-radius: 6px;
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-	padding: 9px;
-	margin: 5px;
-	border: solid 2px #d1d3d7;
-	height: 10px;
-}
-
-input[type="button"] {
-	position: relative;
-	top: 10px;
-	padding: 0px;
-	border-style: none;
-	border-bottom: 4px solid #344860;
-	color: #f2f2f2;
-	height: 35px;
-}
-
-input[type="checkbox"] {
-	height: 20px;
-	width: 20px;
-	margin: 5px;
-}
-
-form select, textarea {
-	Color: #588ca5;
-	font-size: 1em;
-	display: block;
-	border-radius: 6px;
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-	padding: 6px;
-	margin: 2px;
-	border: solid 2px #d1d3d7;
-}
-
-form fieldset fieldset {
-	margin: 10px 10px 0 10px;
 }
 
 header {
@@ -79,6 +22,7 @@ header {
 	background-color: #163a5a;
 	color: white;
 }
+
 /*Logo do Sigiss*/
 .logo {
 	display: flex;
