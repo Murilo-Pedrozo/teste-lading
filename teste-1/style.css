@@ -785,7 +785,7 @@ a:hover {
 /*Mensagem Valinhos*/
 .popup-esquerda {
   position: fixed;
-  top: 20%;
+  top: 70px;
   left: 0;
   width: 320px;
   background: #fff;
