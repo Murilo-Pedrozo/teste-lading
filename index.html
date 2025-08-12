@@ -1,138 +1,419 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SigissWeb - Prefeitura de Valinhos</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Cache-Control" content="no-cache" />
+<meta http-equiv="Pragma" content="no-cache" />
+<meta http-equiv="Expires" content="0" />
+<TITLE>S.I.G.I.S.S. Web 4.0 - Sistema Integrado de Gerencimento
+	do I.S.S.Q.N.</TITLE>
   <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <link rel="stylesheet" href="media-query.css">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet"
+	href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+<body
+	onload="setEventosNosComponentes(); document.forms[0].getElementsByTagName('input')[0].focus();" id="body-2">
 
-<header>
-  <div class="logo">
-    <div class="bars">
-      <div class="bar bar1"></div>
-      <div class="bar bar2"></div>
-      <div class="bar bar3"></div>
-    </div>
-    <span>Sigiss Web</span>
-  </div>
-  <h1>Prefeitura do Município de Valinhos</h1>
-  <nav>
-    <a href="#acesso">Acesso</a>
-    <a href="#cadastro">Cadastro</a>
-    <a href="#documentos">Documentos</a>
-    <a href="#downloads">Downloads</a>
-    <a href="#mei">MEI</a>
-    <a href="#suporte">Suporte</a>
-  </nav>
-</header>
+	<header id="topo">
+		<div class="logo">
+			<div class="bars">
+				<div class="bar bar1"></div>
+				<div class="bar bar2"></div>
+				<div class="bar bar3"></div>
+			</div>
+			<span>Sigiss Web</span>
+		</div>
 
-<div class="spacer"></div>
+		<h1>Prefeitura do Município de Valinhos</h1>
 
-<!-- Seção 1 -->
-<section id="acesso">
-  <div class="acesso-container">
-    <div class="acesso-texto">
-      <h2>ISS e Nota Fiscal: simples, rápido e seguro.</h2>
-    </div>
-    <div class="login-box">
-      <label>Login</label>
-      <input type="text" placeholder="Digite seu login">
-      <label>Senha</label>
-      <input type="password" placeholder="Digite sua senha">
-      <button>Acessar</button>
-      <p><a href="#">Esqueci minha senha</a></p>
-    </div>
-  </div>
-</section>
+		<span id="burguer" class="material-symbols-outlined"
+			onclick="clickMenu()">menu</span>
 
-<!-- Seção 2 -->
-<section id="cadastro" style="background-image:url('bg2.jpg');">
-  <h2>Cadastro do Responsável Contábil/Empresa</h2>
-  <p>Realize o cadastro para emissão de notas fiscais e recolhimento de ISS de forma prática e segura.</p>
-</section>
+		<menu id="itens">
+			<ul>
+				<li><a href="#acesso">Acesso</a></li>
+				<li><a href="#cadastro">Cadastro</a></li>
+				<li><a href="#documentos">Documentos</a></li>
+				<li><a href="#downloads">Downloads</a></li>
+				<li><a href="#mei">MEI</a></li>
+				<li><a href="#suporte">Suporte</a></li>
+			</ul>
+		</menu>
 
-<section id="documentos">
-  <h2>Verifique seus documentos</h2>
-  <div class="documentos-links">
-    <a href="#">
-      <div class="doc-card">Autenticidade da NFe</div>
-    </a>
-    <a href="#">
-      <div class="doc-card">Autenticidade da CND</div>
-    </a>
-    <a href="#">
-      <div class="doc-card">Autenticidade da DRISS</div>
-    </a>
-  </div>
-</section>
-<section id="downloads">
-  <h2><span style="font-size: 32px;">📥</span> Materiais para Download</h2>
-  <p class="subtitulo">Saiba mais sobre como utilizar o Sigiss Web e integre facilmente ao seu sistema.</p>
+	</header>
 
-  <div class="downloads-grid">
-    <a href="#">
-      <div class="download-card">
-        <h3>Manual do SIGISSWEB</h3>
-        <p>Guia completo de uso do sistema para contribuintes e contadores.</p>
-      </div>
-    </a>
+	<section id="acesso">
+		<div class="acesso-container">
+			<div class="acesso-texto">
+				<h2>
+					ISS e Nota Fiscal: <span class="destaque">simples</span>, <span
+						class="destaque">rápido</span> e <span class="destaque">seguro</span>.
+					Acesse o sistema SIGISSWEB e emita suas notas com <span
+						class="destaque">praticidade</span> e <span class="destaque">confiança</span>.
+				</h2>
+			</div>
+			<div class="login-box">
+				<form name="frmlogin" method="post" id="formAcesso">
+					<label for="login">Login:</label> <input type="text" maxlength="20"
+						 name="loginacesso" id="edtlogin"
+						placeholder="Digite seu login"> <label for="senha">Senha:</label>
+					<input type="password"  name="senha"
+						id="edtsenha" placeholder="Digite sua senha">
 
-    <a href="#">
-      <div class="download-card">
-        <h3>Documentação para Integração</h3>
-        <p>Instruções para integração do SIGISSWEB com o seu site ou sistema.</p>
-      </div>
-    </a>
+					<button type="button" name="btnExecutar"
+						onclick="javascript: escreveMsgComAnimacao('Acessando sistema...'); submitForm(document.getElementById('formAcesso'));">
+						Acessar</button>
+				</form>
+				<a class="link-esqueci" href="javascript: esqueciMinhaSenha();">Esqueci
+					minha senha</a>
+			</div>
+		</div>
 
-    <a href="#">
-      <div class="download-card">
-        <h3>Lista de Serviços e NBS</h3>
-        <p>Classificações atualizadas conforme normas vigentes.</p>
-      </div>
-    </a>
-  </div>
-</section>
+		<div id="miniPopup" class="mini-popup" style="display: none;">
+			<h3>Dúvidas? Prefeitura ou Suporte</h3>
+			<p>Acesse a seção correspondente</p>
+			<div class="popup-buttons">
+				<button id="btnSim">Sim</button>
+				<button id="btnNao">Não</button>
+			</div>
+		</div>
+		<div id="popupAviso" class="popup-esquerda" style="display: none;">
+			<button id="btnFecharPopup" class="btn-fechar">×</button>
+			<div class="popup-texto">
+				<strong>ATENÇÃO:</strong><br> Desde de 01/06/2025 o Município
+				de Valinhos passou a emitir a Nota Fiscal Eletrônica de Serviços no
+				padrão nacional, integrada à Receita Federal do Brasil em
+				atendimento à LC 214/2015 artigo 62 §7°.<br> Essa integração é
+				obrigatória a todos os Municípios do Brasil em atendimento à Reforma
+				Tributária.
+			</div>
+		</div>
 
-<!-- Seção 5 -->
-<section id="mei">
-  <h2>Você é MEI?</h2>
-  <p class="comunicado">Comunicado importante sobre emissão de Nota Fiscal de Serviço no padrão nacional a partir de 01/09/2023.</p>
-</section>
+		<div id="popupAviso" class="popup-esquerda" style="display: none;">
+			<button id="btnFecharPopup" class="btn-fechar">×</button>
+			<div class="popup-texto">
+				<strong>ATENÇÃO:</strong><br> O SIGISSWEB É UTILIZADO PELOS
+				CONTRIBUINTES APENAS PARA RESPONDER AS NOTIFICAÇÕES DO FISCO
+				MUNICIPAL. PARA SOLICITAÇÃO / EMISSÃO DE NOTA FISCAL DE SERVIÇOS
+				ENTRE EM CONTATO COM O DEPARTAMENTO DE FISCALIZAÇÃO ATRAVÉS DO
+				NÚMERO 19-3965-1400 E SOLICITE AS DEVIDAS INFORMAÇÕES.
+			</div>
+		</div>
 
-<!-- Seção 6 -->
-<section id="suporte">
-  <h2>Entre em contato com nossa equipe</h2>
-  <div class="contato-blocos">
-    
-    <div class="contato-item">
-      <h3>Telefones</h3>
-      <p>(19) 3873-7633</p>
-      <p>(19) 3828-7750</p>
-      <p>(19) 3828-7727</p>
-    </div>
+	</section>
 
-    <div class="contato-item">
-      <h3>Emails</h3>
-      <p>erick@glcconsultoria.com.br</p>
-      <p>suporte@sigissweb.com</p>
-      <p>suporte@glcconsultoria.com.br</p>
-      <p>murilo@sigissweb.com</p>
-    </div>
+	<section id="cadastro" class="fade-init fade-up">
+		<div class="cadastro-container">
 
-    <div class="contato-item">
-      <h3>Skype</h3>
-      <p>suporte.sigiss1</p>
-      <p>suporte.sigiss</p>
-    </div>
+			<div class="cadastro-card">
+				<h2>Cadastro do Responsável Contábil/Empresa</h2>
+				<p>Cadastre-se para emitir Notas Fiscais e efetuar o
+					recolhimento do ISS com eficiência, segurança e praticidade.</p>
+				<a class="cad-card"
+					href="#">
+					Cadastro do Responsável Contábil/Empresa </a>
+			</div>
 
-  </div>
-</section>
+			<div class="cadastro-card">
+				<h3>Deseja alterar o e-mail de acesso?</h3>
+				<p>Clique para ser redirecionado(a) para atualizar o e-mail de
+					recebimento da senha.</p>
+				<a class="cad-card"
+					href="#"
+					target="_blank"> Alterar e-mail </a>
+			</div>
 
-<footer>
-  &copy; 2025 GLC-Consultoria - SigissWeb
-</footer>
+		</div>
+	</section>
+
+
+	<section id="documentos">
+		<h2>Verifique seus documentos</h2>
+		<div class="documentos-links fade-init fade-scale-up">
+			<a class="doc-card" href="#">Autenticidade da NFe</a> <a
+				class="doc-card" href="#">Verificar Autenticidade da
+				CND</a> <a class="doc-card" href="#">Verificar
+				Autenticidade da DRISS</a>
+
+		</div>
+	</section>
+
+	<section id="downloads" class="fade-init fade-left">
+		<h2>
+			<span style="font-size: 32px;"></span> Materiais para Download
+		</h2>
+		<p class="subtitulo">Saiba mais sobre como utilizar o Sigiss Web e
+			integre facilmente ao seu sistema.</p>
+		<div class="downloads-grid">
+			<a class="download-card"
+				href="#">
+				<h3>Manual do SIGISSWEB</h3>
+				<p>Guia completo de uso do sistema para contribuintes e
+					contadores.</p>
+			</a> <a class="download-card"
+				href="#">
+				<h3>Documentação para Integração</h3>
+				<p>Instruções para integração do SIGISSWEB com o seu site ou
+					sistema.</p>
+			</a> <a class="download-card"
+				href="#">
+				<h3>Nova Listas de Classif. de Serviço e NBS</h3>
+				<p>Classificações atualizadas conforme normas vigentes.</p>
+			</a>
+
+			<a class="download-card"
+				href="#"
+				target="_blank">
+				<h3>Alíquotas ISS de Itirapina</h3>
+				<p>Lista das Alíquotas do município de Itirapina</p>
+			</a>
+
+		</div>
+	</section>
+
+	<section id="mei" class="fade-init fade-right">
+		<h2>Você é MEI?</h2>
+		<p class="comunicado">Comunicado importante sobre emissão de Nota
+
+		<div class="comunicado-box">
+			<p>
+				<strong>Prezado MEI,</strong>
+			</p>
+			<p>
+				Considerando o disposto na Resolução CGSN 172/2023, a emissão de <strong>NOTA
+					FISCAL DE SERVIÇO NO PADRÃO NACIONAL</strong> entrará em vigor
+				obrigatoriamente em 01/09/2023. <br> Desta forma, <strong>NÃO
+					será mais permitida</strong> a emissão de Notas Fiscais de Serviços pelo
+				SIGISSWEB a partir desta data, estando disponível apenas o acesso
+				para consulta das notas fiscais já emitidas no sistema.
+			</p>
+			<p>Assim, orientamos que acesse o site abaixo para informações
+				sobre procedimentos de cadastro e emissão da nota fiscal eletrônica
+				nacional:</p>
+			<p>
+				<a class="comunicado-link"
+					href="#"
+					target="_blank"> NOTA FISCAL DE SERVIÇO NO PADRÃO NACIONAL </a>
+			</p>
+			<p>Qualquer dúvida sobre o sistema nacional, entre em contato com
+				a Receita Federal do Brasil pelo e-mail abaixo, uma vez que o
+				SIGISSWEB não será responsável pelo suporte técnico:</p>
+			<p>
+				<strong>E-mail:</strong> atendimento.nfs-e@rfb.gov.br
+			</p>
+			<p>Atenciosamente.</p>
+		</div>
+	</section>
+	
+	<section id="suporte" class="fade-init fade-zoom">
+		<h2>Precisa de ajuda?</h2>
+		<p id="suporte-p">Entre em contato com nossa equipe técnica ou
+			Prefeitura.</p>
+
+		<div class="contato-blocos">
+
+			<div class="contato-item">
+				<h3>Telefones</h3>
+				<p>(19) 3873-7633</p>
+				<p>(19) 3828-7750</p>
+				<p>(19) 3828-7727</p>
+			</div>
+
+			<div class="contato-item">
+				<h3>E-mails</h3>
+				<p>erick@glcconsultoria.com.br</p>
+				<p>suporte@sigissweb.com</p>
+				<p>suporte@glcconsultoria.com.br</p>
+				<p>murilo@sigissweb.com</p>
+			</div>
+
+			<div class="contato-item">
+				<h3>Skype</h3>
+				<p>suporte.sigiss1</p>
+				<p>suporte.sigiss</p>
+			</div>
+
+			<div class="contato-item">
+				<h3>Telefones da prefeitura</h3>
+				<p id="telCabecalho"><%=telpref.trim()%></p>
+			</div>
+	
+			<div id="contato-item">
+
+				<div class="contato-item">
+					<h3>Contato com a Fiscalização</h3>
+					<p>
+						<strong>Plantão Fiscal:</strong> fiscal.fazenda@valinhos.sp.gov.br
+					</p>
+					<p>
+						<strong>Abertura de Empresas:</strong>
+						cadastromobiliario@valinhos.sp.gov.br
+					</p>
+					<p>
+						<strong>Viabilidade/Zoneamento:</strong>
+						redesim@valinhos.sp.gov.br
+					</p>
+				</div>
+			
+			</div>
+
+
+		</div>
+
+	</section>
+
+	<div class="scroll-top-btn" id="scrollTopBtn">
+		<a href="#topo"> <img src="./img/flecha45px.png"
+			alt="Voltar ao topo">
+		</a>
+	</div>
+
+	<footer>
+		&copy; 2025 <a href="https://glcconsultoria.com.br/" target="_blank">GLC-Consultoria</a>
+		- SigissWeb
+	</footer>
+	<script type="text/javascript">
+		if (navigator.userAgent.indexOf("MSIE") != -1) {
+
+			mensagemDlg(
+					"Aviso",
+					"Navagedor não abilitado para uso deste sistema. Favor usar Chrome ou Firefox.",
+					'2');
+			var form = document.getElementById("acesso");
+			form.style.display = "none";
+
+			elemento = document.createElement("img");
+			elemento.setAttribute("id", "avisochrome");
+			elemento.setAttribute("src", "./img/aviso-uso-chrome.gif");
+
+			document.body.appendChild(elemento);
+
+		}
+
+		/*animações para seções*/
+		document.addEventListener("DOMContentLoaded", function() {
+			const elementos = document.querySelectorAll('.fade-init');
+
+			const observador = new IntersectionObserver(function(entradas) {
+				entradas.forEach(function(entrada) {
+					if (entrada.isIntersecting) {
+						entrada.target.classList.add('show');
+					}
+				});
+			}, {
+				threshold : 0.1
+			});
+
+			elementos.forEach(function(el) {
+				observador.observe(el);
+			});
+		});
+
+		/*Menu Hamburguer*/
+
+		const itens = document.getElementById('itens'); // pega o menu pelo ID
+
+		function mudouTamanho() {
+			if (window.innerWidth >= 768) {
+				itens.style.display = 'block'
+			} else {
+				itens.style.display = 'none'
+			}
+		}
+
+		function clickMenu() {
+			if (itens.style.display == 'block') {
+				itens.style.display = 'none'
+			} else {
+				itens.style.display = 'block'
+			}
+		}
+
+		window.addEventListener('resize', mudouTamanho);
+		window.addEventListener('load', mudouTamanho);
+
+		/*pop-up para valinhos*/
+		window.addEventListener('load', function() {
+			const popup = document.getElementById('miniPopup');
+			const btnSim = document.getElementById('btnSim');
+			const btnNao = document.getElementById('btnNao');
+
+			popup.style.display = 'block';
+
+			btnSim.addEventListener('click', function() {
+				popup.style.display = 'none';
+				const suporteSection = document.getElementById('suporte');
+				if (suporteSection) {
+					suporteSection.scrollIntoView({
+						behavior : 'smooth'
+					});
+				}
+			});
+
+			btnNao.addEventListener('click', function() {
+				popup.style.display = 'none';
+			});
+		});
+
+		/*Botao de voltar para o topo*/
+		const scrollBtn = document.getElementById("scrollTopBtn");
+
+		window.addEventListener("scroll", function() {
+			if (window.scrollY > 200) {
+				scrollBtn.classList.add("show");
+			} else {
+				scrollBtn.classList.remove("show");
+			}
+		});
+
+		scrollBtn.addEventListener("click", function(e) {
+			e.preventDefault();
+			window.scrollTo({
+				top : 0,
+				behavior : "smooth"
+			});
+		});
+
+		/*Animação para os links dos menus*/
+		var links = document.querySelectorAll('menu#itens a');
+		for (var i = 0; i < links.length; i++) {
+			links[i].addEventListener('click', function(event) {
+				event.preventDefault();
+
+				var href = this.getAttribute('href');
+				var targetElement = document.querySelector(href);
+
+				if (targetElement) {
+					targetElement.scrollIntoView({
+						behavior : 'smooth'
+					});
+				}
+			});
+		}
+
+		/*Mensagem Valinhos*/
+		window.addEventListener('load', function() {
+			const popup = document.getElementById('popupAviso');
+			const btnFechar = document.getElementById('btnFecharPopup');
+
+			popup.style.display = 'block';
+
+			btnFechar.addEventListener('click', function() {
+				popup.classList.add('fechar');
+
+				popup.addEventListener('transitionend', function handler() {
+					popup.style.display = 'none';
+					popup.classList.remove('fechar');
+					popup.removeEventListener('transitionend', handler);
+				});
+			});
+		});
+	</script>
+
 
 </body>
+<head>
+<meta http-equiv="Pragma" content="no-cache">
+</head>
 </html>
