@@ -15,6 +15,23 @@
 }
 
 @media screen and (max-width: 767px) {
+  .popup-esquerda {
+    width: 90%;          /* ocupa 90% da tela */
+    left: 5px;           /* margem lateral */
+    top: 10px;
+    font-size: 13px;
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .mini-popup {
+    max-width: 90%;      /* ocupa quase toda largura */
+    right: 5px;
+    top: 10px;
+    font-size: 13px;
+    padding: 10px;
+    border-radius: 8px;
+  }
   menu {
     display: none;
     width: 100%;
