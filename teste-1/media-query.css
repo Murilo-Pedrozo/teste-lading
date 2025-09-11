@@ -26,15 +26,7 @@
   }
 
   .mini-popup {
-	position: fixed;
-	width: 90%;
-	left: 50%;
-	top: 10px;
-	transform: translateX(-50%);
-	font-size: 13px;
-	padding: 10px;
-	border-radius: 8px;
-	box-sizing: border-box;
+	display: none !important;
 }
   nav {
     display: none;
