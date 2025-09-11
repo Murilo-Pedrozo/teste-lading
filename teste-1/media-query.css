@@ -26,13 +26,16 @@
   }
 
   .mini-popup {
-    width: 90%;      /* ocupa quase toda largura */
-    right: 5px;
-    top: 10px;
-    font-size: 13px;
-    padding: 10px;
-    border-radius: 8px;
-  }
+	position: fixed;
+	width: 90%;
+	left: 50%;
+	top: 10px;
+	transform: translateX(-50%);
+	font-size: 13px;
+	padding: 10px;
+	border-radius: 8px;
+	box-sizing: border-box;
+}
   nav {
     display: none;
     width: 100%;
@@ -83,6 +86,10 @@
     text-align: center;
     margin: 5px 0;
   }
+
+  html, body {
+	overflow-x: hidden;
+}
  
 }
 
@@ -137,4 +144,5 @@
     text-align: center;
     margin: 5px 0;
   }
+  
 }
